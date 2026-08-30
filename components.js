@@ -211,7 +211,7 @@ function injectFooter() {
                 <div>
                     <h4>Discover</h4>
                     <div class="footer-links">
-                        <a href="index.html">Home Atelier</a>
+                        <a href="index.html">Home</a>
                         <a href="home2.html">Home Premium</a>
                         <a href="menu.html">Full Menu</a>
                         <a href="custom-orders.html">Custom Orders</a>
@@ -313,16 +313,25 @@ function initMenuTabs() {
     const tabs = document.querySelectorAll('.menu-tab');
     const categories = document.querySelectorAll('.menu-category');
 
+    function selectCategory(target) {
+        tabs.forEach(t => t.classList.toggle('active', t.dataset.category === target));
+        categories.forEach(cat => cat.classList.toggle('active', cat.dataset.category === target));
+    }
+
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            const target = tab.dataset.category;
-            categories.forEach(cat => {
-                cat.classList.toggle('active', cat.dataset.category === target);
-            });
+            selectCategory(tab.dataset.category);
         });
     });
+
+    const params = new URLSearchParams(window.location.search);
+    const catParam = params.get('category') || window.location.hash.replace('#', '');
+    if (catParam) {
+        const matchingTab = Array.from(tabs).find(t => t.dataset.category === catParam);
+        if (matchingTab) {
+            selectCategory(catParam);
+        }
+    }
 }
 
 /* ─── COUNTER ANIMATION ────────────────────────────── */
