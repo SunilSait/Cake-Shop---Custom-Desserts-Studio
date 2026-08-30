@@ -315,7 +315,11 @@ function initMenuTabs() {
 
     function selectCategory(target) {
         tabs.forEach(t => t.classList.toggle('active', t.dataset.category === target));
-        categories.forEach(cat => cat.classList.toggle('active', cat.dataset.category === target));
+        if (target === 'all' || !target) {
+            categories.forEach(cat => cat.classList.add('active'));
+        } else {
+            categories.forEach(cat => cat.classList.toggle('active', cat.dataset.category === target));
+        }
     }
 
     tabs.forEach(tab => {
