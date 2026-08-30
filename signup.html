@@ -10,16 +10,26 @@
 </head>
 <body class="auth-page">
 
-<div class="auth-container">
-    <div class="auth-card">
-        <!-- Theme & RTL Toggles -->
-        <div class="auth-toggles">
-            <button onclick="toggleDir()" class="nav-icon-btn" title="Toggle Direction"><span class="dir-label" style="font-size:0.65rem;font-weight:700;">LTR</span></button>
-            <button onclick="toggleTheme()" class="nav-icon-btn" title="Toggle Theme"><span class="theme-icon-wrap"></span></button>
-        </div>
+<!-- Top Bar -->
+<div class="auth-topbar">
+    <div style="display:flex;gap:0.5rem;">
+        <button onclick="toggleDir()" class="auth-toggle-btn" title="Toggle Direction">
+            <span class="dir-label" style="font-size:0.625rem;font-weight:700;">LTR</span>
+        </button>
+        <button onclick="toggleTheme()" class="auth-toggle-btn" title="Toggle Theme" aria-label="Toggle dark mode">
+            <span class="theme-icon-wrap"></span>
+        </button>
+    </div>
+</div>
+
+<!-- Main Signup Card -->
+<main style="flex:1;display:flex;align-items:center;justify-content:center;padding:1rem;width:100%;">
+    <div class="auth-card" style="max-width:480px;">
+        <!-- Decorative ambient orb -->
+        <div class="auth-glow-orb"></div>
 
         <!-- Logo -->
-        <a href="index.html" class="auth-logo" aria-label="Back to home">
+        <a href="index.html" class="auth-logo" aria-label="Dessert Cake Studio Home">
             <div class="nav-logo-icon">
                 <svg width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="22" y="58" width="56" height="22" rx="6" fill="#C47C48"/>
@@ -28,22 +38,48 @@
                     <rect x="33" y="42" width="34" height="2.5" rx="1.2" fill="#C47C48" opacity="0.5"/>
                     <rect x="37" y="26" width="26" height="16" rx="4" fill="#C47C48"/>
                     <circle cx="50" cy="20" r="5" fill="#FAF7F2"/>
+                    <path d="M50 11C48.5 14 47 16 50 19C53 16 51.5 14 50 11Z" fill="#E5A862"/>
                 </svg>
             </div>
-            <div class="nav-logo-text"><span class="brand-top">DESSERT</span><span class="brand-bottom">Cake Studio</span></div>
+            <div class="auth-logo-text">
+                <span class="brand-top">DESSERT</span>
+                <span class="brand-bottom">Cake Studio</span>
+            </div>
         </a>
 
-        <h1>Create Client Account</h1>
-        <p class="auth-subtitle">Join our client network to manage bespoke commissions, access VIP seasonal drops, and book tasting sessions.</p>
+        <!-- Header -->
+        <div style="text-align:center;margin-bottom:1.75rem;">
+            <h1 style="font-size:1.6rem;margin-bottom:0.35rem;">Create Account</h1>
+            <p style="font-size:0.875rem;color:var(--text-muted);">Join our confectionery network to commission cakes & book tastings</p>
+        </div>
 
-        <form onsubmit="event.preventDefault(); alert('Account registered successfully!'); window.location.href='login.html';">
-            <div class="form-group">
-                <label class="form-label" for="signup-fname">First Name</label>
-                <input type="text" id="signup-fname" class="form-input" placeholder="Your first name" required>
-            </div>
-            <div class="form-group">
-                <label class="form-label" for="signup-lname">Last Name</label>
-                <input type="text" id="signup-lname" class="form-input" placeholder="Your last name" required>
+        <!-- Social Signup Grid -->
+        <div class="social-login-grid">
+            <button class="social-btn" onclick="alert('Signed up with Google'); window.location.href='index.html';" title="Sign up with Google" type="button">
+                <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </button>
+            <button class="social-btn" onclick="alert('Signed up with Apple'); window.location.href='index.html';" title="Sign up with Apple" type="button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+            </button>
+            <button class="social-btn" onclick="alert('Signed up with Facebook'); window.location.href='index.html';" title="Sign up with Facebook" type="button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </button>
+        </div>
+
+        <!-- Divider -->
+        <div class="divider">or sign up with email</div>
+
+        <!-- Form -->
+        <form onsubmit="event.preventDefault(); alert('Account registered successfully!'); window.location.href='login.html';" id="signup-form">
+            <div class="grid grid-2" style="gap:0.85rem;">
+                <div class="form-group" style="margin-bottom:0.85rem;">
+                    <label class="form-label" for="signup-fname">First Name</label>
+                    <input type="text" id="signup-fname" class="form-input" placeholder="First name" required>
+                </div>
+                <div class="form-group" style="margin-bottom:0.85rem;">
+                    <label class="form-label" for="signup-lname">Last Name</label>
+                    <input type="text" id="signup-lname" class="form-input" placeholder="Last name" required>
+                </div>
             </div>
             <div class="form-group">
                 <label class="form-label" for="signup-email">Email Address</label>
@@ -55,37 +91,41 @@
             </div>
             <div class="form-group">
                 <label class="form-label" for="signup-password">Password</label>
-                <div class="password-field">
-                    <input type="password" id="signup-password" class="form-input" placeholder="Create a secure password" required minlength="8">
-                    <button type="button" class="pw-toggle" onclick="togglePasswordVisibility('signup-password', this)" aria-label="Toggle password visibility"><span class="pw-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span></button>
+                <div class="password-wrapper">
+                    <input type="password" id="signup-password" class="form-input" placeholder="Create a password" required minlength="8">
+                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('signup-password', this)" aria-label="Toggle password visibility">
+                        <span class="pw-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
+                    </button>
                 </div>
             </div>
             <div class="form-group">
                 <label class="form-label" for="signup-confirm">Confirm Password</label>
-                <div class="password-field">
+                <div class="password-wrapper">
                     <input type="password" id="signup-confirm" class="form-input" placeholder="Confirm your password" required minlength="8">
-                    <button type="button" class="pw-toggle" onclick="togglePasswordVisibility('signup-confirm', this)" aria-label="Toggle password visibility"><span class="pw-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span></button>
+                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('signup-confirm', this)" aria-label="Toggle password visibility">
+                        <span class="pw-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
+                    </button>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary btn-lg w-full" style="margin-top:0.5rem;">Register Account</button>
+            <div class="checkbox-wrapper" style="margin-bottom:1.5rem;">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the <a href="coming-soon.html" class="link-primary">Terms of Service</a> and <a href="coming-soon.html" class="link-primary">Privacy Policy</a></label>
+            </div>
+            <button type="submit" class="btn btn-primary w-full btn-lg">Create Account</button>
         </form>
 
-        <div class="auth-divider"><span>or sign up with</span></div>
-
-        <button class="social-btn" onclick="alert('Google Sign Up')">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.053 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
-            Sign up with Google
-        </button>
-        <button class="social-btn" onclick="alert('Apple Sign Up')">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-            Sign up with Apple
-        </button>
-
-        <p class="auth-footer">Already have an account? <a href="login.html">Sign in here</a></p>
+        <!-- Footer link -->
+        <p style="text-align:center;margin-top:1.75rem;font-size:0.875rem;color:var(--text-muted);">
+            Already have an account? <a href="login.html" class="link-primary">Sign In</a>
+        </p>
     </div>
-</div>
+</main>
 
 <script src="components.js"></script>
-<script>initAuthPage();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    initAuthPage();
+});
+</script>
 </body>
 </html>
