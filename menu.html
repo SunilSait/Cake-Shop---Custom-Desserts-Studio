@@ -14,7 +14,7 @@
 <div id="main-nav"></div>
 
 <!-- Page Hero -->
-<section class="page-hero">
+<section class="page-hero page-hero-banner page-hero-menu">
     <div class="container">
         <span class="section-label">Artisanal Bakery</span>
         <h1>Our Confectionery Menu</h1>
@@ -35,142 +35,231 @@
             <button class="menu-tab" data-category="macarons">Macaron Sets</button>
         </div>
 
-        <!-- Category 1: Celebration Cakes (3 Items) -->
-        <div class="menu-category grid grid-3 active" data-category="celebration">
-            <div class="menu-item-card scroll-reveal">
-                <img src="assets/images/hero_cake_1788076593806.jpg" alt="Golden Caramel Velvet Tiered Cake" loading="lazy">
+        <!-- Unified Menu Grid (2 x 7 then 1 in centre) -->
+        <div class="menu-items-grid">
+            <!-- Item 1: Celebration Cake -->
+            <div class="menu-item-card scroll-reveal" data-category="celebration">
+                <img src="assets/images/menu_golden_caramel_cake_1788137342983.jpg" alt="Golden Caramel Velvet Tiered Cake" loading="lazy">
                 <div class="menu-item-body">
                     <h3>Golden Caramel Velvet</h3>
                     <p>Three-tier toasted caramel sponge with Belgian white ganache drip, edible flowers, and gold leaf accents.</p>
-                    <span class="menu-item-price">From $85</span>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">From $85</span>
+                        <a href="custom-orders.html" class="btn btn-primary btn-sm menu-order-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            Order Now
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="menu-item-card scroll-reveal delay-100">
-                <img src="assets/images/red_velvet_cake_1788076853825.jpg" alt="Nocturne Red Velvet Classic" loading="lazy">
+            <!-- Item 2: Celebration Cake -->
+            <div class="menu-item-card scroll-reveal delay-100" data-category="celebration">
+                <img src="assets/images/menu_nocturne_red_velvet_1788137361296.jpg" alt="Nocturne Red Velvet Classic" loading="lazy">
                 <div class="menu-item-body">
                     <h3>Nocturne Red Velvet</h3>
                     <p>Velvety cocoa sponge with aged Madagascar vanilla cream cheese frosting and toasted biscuit crumb.</p>
-                    <span class="menu-item-price">From $65</span>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">From $65</span>
+                        <a href="custom-orders.html" class="btn btn-primary btn-sm menu-order-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            Order Now
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="menu-item-card scroll-reveal delay-200">
-                <img src="assets/images/celebration_cake_1788076709183.jpg" alt="Confetti Celebration Cake" loading="lazy">
+            <!-- Item 3: Celebration Cake -->
+            <div class="menu-item-card scroll-reveal delay-200" data-category="celebration">
+                <img src="assets/images/menu_festival_celebration_cake_1788137395940.jpg" alt="Confetti Celebration Cake" loading="lazy">
                 <div class="menu-item-body">
                     <h3>Festival Celebration Cake</h3>
                     <p>Layered bourbon vanilla sponge with Swiss meringue buttercream and artisan gold pearl crispies.</p>
-                    <span class="menu-item-price">From $70</span>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">From $70</span>
+                        <a href="custom-orders.html" class="btn btn-primary btn-sm menu-order-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            Order Now
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Category 2: Artisan Cupcakes (3 Items) -->
-        <div class="menu-category grid grid-3 active" data-category="cupcakes">
-            <div class="menu-item-card">
-                <img src="assets/images/cupcakes_display_1788076606150.jpg" alt="Rose Gold Garden Cupcakes (12)" loading="lazy">
+            <!-- Item 4: Cupcake -->
+            <div class="menu-item-card scroll-reveal" data-category="cupcakes">
+                <img src="assets/images/menu_amber_blossom_cupcakes_1788137416796.jpg" alt="Rose Gold Garden Cupcakes (12)" loading="lazy">
                 <div class="menu-item-body">
                     <h3>Amber Blossom Collection (12pc)</h3>
                     <p>Assorted vanilla and caramel cupcakes with piped buttercream roses and 24k gold leaf flakes.</p>
-                    <span class="menu-item-price">$48</span>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">$48</span>
+                        <a href="custom-orders.html" class="btn btn-primary btn-sm menu-order-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            Order Now
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="menu-item-card">
-                <img src="assets/images/cupcakes_display_1788076606150.jpg" alt="Noir Cocoa Fudge Cupcakes (6)" loading="lazy">
+            <!-- Item 5: Cupcake -->
+            <div class="menu-item-card scroll-reveal delay-100" data-category="cupcakes">
+                <img src="assets/images/menu_noir_cocoa_cupcakes_1788137438795.jpg" alt="Noir Cocoa Fudge Cupcakes (6)" loading="lazy">
                 <div class="menu-item-body">
                     <h3>Noir Cocoa Fudge (6pc)</h3>
                     <p>70% Guanaja dark chocolate cupcakes with roasted cocoa fudge frosting and chocolate shards.</p>
-                    <span class="menu-item-price">$28</span>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">$28</span>
+                        <a href="custom-orders.html" class="btn btn-primary btn-sm menu-order-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            Order Now
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="menu-item-card">
-                <img src="assets/images/cupcakes_display_1788076606150.jpg" alt="Bourbon Vanilla Bean Cupcakes (6)" loading="lazy">
+            <!-- Item 6: Cupcake -->
+            <div class="menu-item-card scroll-reveal delay-200" data-category="cupcakes">
+                <img src="assets/images/menu_bourbon_vanilla_cupcakes_1788137461606.jpg" alt="Bourbon Vanilla Bean Cupcakes (6)" loading="lazy">
                 <div class="menu-item-body">
                     <h3>Bourbon Vanilla Bean (6pc)</h3>
                     <p>Tender vanilla bean cupcakes crowned with whipped Swiss meringue and sea salt caramel pearls.</p>
-                    <span class="menu-item-price">$24</span>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">$24</span>
+                        <a href="custom-orders.html" class="btn btn-primary btn-sm menu-order-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            Order Now
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Category 3: Dessert Jars (3 Items) -->
-        <div class="menu-category grid grid-3 active" data-category="jars">
-            <div class="menu-item-card">
-                <img src="assets/images/dessert_jars_1788076620637.jpg" alt="Valrhona Cocoa Mousse Jar" loading="lazy">
+            <!-- Item 7: Dessert Jar -->
+            <div class="menu-item-card scroll-reveal" data-category="jars">
+                <img src="assets/images/menu_valrhona_dark_mousse_1788138470952.jpg" alt="Valrhona Cocoa Mousse Jar" loading="lazy">
                 <div class="menu-item-body">
                     <h3>Valrhona Dark Mousse Jar</h3>
                     <p>Layers of airy dark chocolate mousse, espresso biscuit crumble, and salted caramel chantilly cream.</p>
-                    <span class="menu-item-price">$12</span>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">$12</span>
+                        <a href="custom-orders.html" class="btn btn-primary btn-sm menu-order-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            Order Now
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="menu-item-card">
-                <img src="assets/images/dessert_jars_1788076620637.jpg" alt="Wildberry Mascarpone Tiramisu Jar" loading="lazy">
+            <!-- Item 8: Dessert Jar -->
+            <div class="menu-item-card scroll-reveal delay-100" data-category="jars">
+                <img src="assets/images/menu_wildberry_mascarpone_1788138503841.jpg" alt="Wildberry Mascarpone Tiramisu Jar" loading="lazy">
                 <div class="menu-item-body">
                     <h3>Wildberry Mascarpone Jar</h3>
                     <p>Espresso-dipped ladyfingers layered with fresh raspberry reduction and whipped Italian mascarpone.</p>
-                    <span class="menu-item-price">$14</span>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">$14</span>
+                        <a href="custom-orders.html" class="btn btn-primary btn-sm menu-order-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            Order Now
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="menu-item-card">
-                <img src="assets/images/dessert_jars_1788076620637.jpg" alt="Toasted Salted Caramel Jar" loading="lazy">
+            <!-- Item 9: Dessert Jar -->
+            <div class="menu-item-card scroll-reveal delay-200" data-category="jars">
+                <img src="assets/images/menu_caramel_pecan_jar_1788138529345.jpg" alt="Toasted Salted Caramel Jar" loading="lazy">
                 <div class="menu-item-body">
                     <h3>Toasted Caramel Pecan Jar</h3>
                     <p>Rich amber caramel sauce with Madagascar vanilla custard, roasted pecans, and flaky sea salt.</p>
-                    <span class="menu-item-price">$13</span>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">$13</span>
+                        <a href="custom-orders.html" class="btn btn-primary btn-sm menu-order-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            Order Now
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Category 4: Chocolate Boxes (3 Items) -->
-        <div class="menu-category grid grid-3 active" data-category="chocolates">
-            <div class="menu-item-card">
-                <img src="assets/images/chocolate_boxes_1788076650313.jpg" alt="Signature Truffle Selection (20pc)" loading="lazy">
+            <!-- Item 10: Chocolate Box -->
+            <div class="menu-item-card scroll-reveal" data-category="chocolates">
+                <img src="assets/images/menu_truffles_box_1788138554491.jpg" alt="Signature Truffle Selection (20pc)" loading="lazy">
                 <div class="menu-item-body">
                     <h3>Signature Truffle Selection (20pc)</h3>
                     <p>Hand-tempered bonbons featuring hazelnut praline, passionfruit ganache, and smoked sea salt caramel.</p>
-                    <span class="menu-item-price">$45</span>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">$45</span>
+                        <a href="custom-orders.html" class="btn btn-primary btn-sm menu-order-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            Order Now
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="menu-item-card">
-                <img src="assets/images/chocolate_boxes_1788076650313.jpg" alt="Imperial Grand Chocolate Vault (30pc)" loading="lazy">
+            <!-- Item 11: Chocolate Box -->
+            <div class="menu-item-card scroll-reveal delay-100" data-category="chocolates">
+                <img src="assets/images/menu_imperial_choc_box_1788138578545.jpg" alt="Imperial Grand Chocolate Vault (30pc)" loading="lazy">
                 <div class="menu-item-body">
                     <h3>Imperial Confectionery Box (30pc)</h3>
                     <p>Our grand gift box featuring single-origin Peruvian, Ecuadorian, and Madagascan cocoa bonbons.</p>
-                    <span class="menu-item-price">$68</span>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">$68</span>
+                        <a href="custom-orders.html" class="btn btn-primary btn-sm menu-order-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            Order Now
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="menu-item-card">
-                <img src="assets/images/chocolate_boxes_1788076650313.jpg" alt="Executive Host Gift Box (12pc)" loading="lazy">
+            <!-- Item 12: Chocolate Box -->
+            <div class="menu-item-card scroll-reveal delay-200" data-category="chocolates">
+                <img src="assets/images/menu_executive_box_1788138603550.jpg" alt="Executive Host Gift Box (12pc)" loading="lazy">
                 <div class="menu-item-body">
                     <h3>Executive Host Box (12pc)</h3>
                     <p>Compact luxury gift box with golden foil lettering — ideal for event favors and client tokens.</p>
-                    <span class="menu-item-price">$32</span>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">$32</span>
+                        <a href="custom-orders.html" class="btn btn-primary btn-sm menu-order-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            Order Now
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Category 5: Macaron Sets (3 Items) -->
-        <div class="menu-category grid grid-3 active" data-category="macarons">
-            <div class="menu-item-card">
-                <img src="assets/images/macarons_set_1788076664155.jpg" alt="Parisian Classic Macaron Set (12pc)" loading="lazy">
+            <!-- Item 13: Macaron Set -->
+            <div class="menu-item-card scroll-reveal" data-category="macarons">
+                <img src="assets/images/menu_parisian_classic_macarons.jpg" alt="Parisian Classic Macaron Set (12pc)" loading="lazy">
                 <div class="menu-item-body">
                     <h3>Parisian Classic Set (12pc)</h3>
                     <p>Assorted almond meringue shells filled with vanilla bean, pistachio, dark cocoa, rose, and lemon curd.</p>
-                    <span class="menu-item-price">$28</span>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">$28</span>
+                        <a href="custom-orders.html" class="btn btn-primary btn-sm menu-order-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            Order Now
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="menu-item-card">
-                <img src="assets/images/macarons_set_1788076664155.jpg" alt="Luxury Confectionery Macaron Box (24pc)" loading="lazy">
+            <!-- Item 14: Macaron Set -->
+            <div class="menu-item-card scroll-reveal delay-100" data-category="macarons">
+                <img src="assets/images/hero_french_macarons_1788093730819.jpg" alt="Luxury Confectionery Macaron Box (24pc)" loading="lazy">
                 <div class="menu-item-body">
                     <h3>Luxury Confectionery Box (24pc)</h3>
                     <p>Extended 8-flavor seasonal flight presented in an amber velvet box with gold foil embossing.</p>
-                    <span class="menu-item-price">$52</span>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">$52</span>
+                        <a href="custom-orders.html" class="btn btn-primary btn-sm menu-order-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            Order Now
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="menu-item-card">
-                <img src="assets/images/macarons_set_1788076664155.jpg" alt="Event Macaron Display Tower (48pc)" loading="lazy">
+            <!-- Item 15: Macaron Set (15th item, centered at bottom) -->
+            <div class="menu-item-card scroll-reveal delay-200 is-last-centered" data-category="macarons">
+                <img src="assets/images/menu_event_macaron_tower.jpg" alt="Event Macaron Display Tower (48pc)" loading="lazy">
                 <div class="menu-item-body">
                     <h3>Event Macaron Tower (48pc)</h3>
                     <p>Architectural acrylic multi-tier display tower arranged in gradient tones for receptions and dessert bars.</p>
-                    <span class="menu-item-price">$95</span>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">$95</span>
+                        <a href="custom-orders.html" class="btn btn-primary btn-sm menu-order-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            Order Now
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

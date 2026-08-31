@@ -353,14 +353,41 @@ function initAccordion() {
 /* ─── MENU TABS ────────────────────────────────────── */
 function initMenuTabs() {
     const tabs = document.querySelectorAll('.menu-tab');
-    const categories = document.querySelectorAll('.menu-category');
+    const items = document.querySelectorAll('.menu-items-grid .menu-item-card');
+    const legacyCategories = document.querySelectorAll('.menu-category');
 
     function selectCategory(target) {
         tabs.forEach(t => t.classList.toggle('active', t.dataset.category === target));
-        if (target === 'all' || !target) {
-            categories.forEach(cat => cat.classList.add('active'));
-        } else {
-            categories.forEach(cat => cat.classList.toggle('active', cat.dataset.category === target));
+
+        // Legacy support if present
+        if (legacyCategories.length) {
+            if (target === 'all' || !target) {
+                legacyCategories.forEach(cat => cat.classList.add('active'));
+            } else {
+                legacyCategories.forEach(cat => cat.classList.toggle('active', cat.dataset.category === target));
+            }
+        }
+
+        // Unified grid support
+        if (items.length) {
+            let visibleCount = 0;
+            let lastVisibleItem = null;
+
+            items.forEach(item => {
+                item.classList.remove('is-last-centered');
+                if (target === 'all' || !target || item.dataset.category === target) {
+                    item.style.display = 'flex';
+                    visibleCount++;
+                    lastVisibleItem = item;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Center the trailing item if odd count (e.g. 15th item in 'all' or 3rd item in 3-item categories)
+            if (visibleCount % 2 === 1 && lastVisibleItem) {
+                lastVisibleItem.classList.add('is-last-centered');
+            }
         }
     }
 
@@ -376,7 +403,11 @@ function initMenuTabs() {
         const matchingTab = Array.from(tabs).find(t => t.dataset.category === catParam);
         if (matchingTab) {
             selectCategory(catParam);
+        } else {
+            selectCategory('all');
         }
+    } else {
+        selectCategory('all');
     }
 }
 
