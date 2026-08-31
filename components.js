@@ -241,7 +241,6 @@ function injectFooter() {
                         <a href="#" class="footer-social-link" aria-label="Facebook">${ICONS.facebook}</a>
                         <a href="#" class="footer-social-link" aria-label="Instagram">${ICONS.instagram}</a>
                         <a href="#" class="footer-social-link" aria-label="YouTube">${ICONS.youtube}</a>
-                        <a href="#" class="footer-social-link" aria-label="Pinterest">${ICONS.pinterest}</a>
                     </div>
                 </div>
 
@@ -300,6 +299,7 @@ function injectFooter() {
 
 /* ─── SCROLL TO TOP ────────────────────────────────── */
 function injectScrollTop() {
+    if (document.body && document.body.classList.contains('auth-page')) return;
     const btn = document.createElement('button');
     btn.className = 'scroll-top-btn';
     btn.setAttribute('aria-label', 'Scroll to top');
@@ -439,6 +439,74 @@ function initCounters() {
     counters.forEach(c => observer.observe(c));
 }
 
+/* ─── HERO SLIDER (HOME 2) ─────────────────────────── */
+function initHeroSlider() {
+    const card = document.getElementById('heroSliderCard');
+    if (!card) return;
+
+    const slides = card.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-slider-dot');
+
+    if (!slides.length) return;
+
+    let currentIndex = 0;
+    let autoInterval = null;
+
+    function goToSlide(index) {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+
+        currentIndex = index;
+
+        slides.forEach((s, i) => {
+            s.classList.toggle('active', i === currentIndex);
+        });
+
+        dots.forEach((d, i) => {
+            d.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function nextSlide() {
+        goToSlide(currentIndex + 1);
+    }
+
+    // Dot navigation
+    dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+            const idx = parseInt(dot.getAttribute('data-slide'), 10);
+            goToSlide(idx);
+            resetTimer();
+        });
+    });
+
+    // Click card to advance
+    card.addEventListener('click', (e) => {
+        if (e.target.closest('a') || e.target.closest('button')) return;
+        nextSlide();
+        resetTimer();
+    });
+
+    function startTimer() {
+        if (autoInterval) clearInterval(autoInterval);
+        autoInterval = setInterval(nextSlide, 4500);
+    }
+
+    function resetTimer() {
+        startTimer();
+    }
+
+    card.addEventListener('mouseenter', () => {
+        if (autoInterval) clearInterval(autoInterval);
+    });
+
+    card.addEventListener('mouseleave', () => {
+        startTimer();
+    });
+
+    startTimer();
+}
+
 /* ─── AUTH PAGE INIT ─────────────────────────────────── */
 function initAuthPage() {
     document.querySelectorAll('.theme-icon-wrap').forEach(updateThemeIcon);
@@ -457,5 +525,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initAccordion();
     initMenuTabs();
     initCounters();
+    initHeroSlider();
     document.querySelectorAll('.theme-icon-wrap').forEach(updateThemeIcon);
 });
