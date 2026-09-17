@@ -4179,6 +4179,190 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     color: var(--text-muted);
 }
 
+/* ===== FLAVOR CARD WITH MEDIA (CREAMS & FILLINGS) ===== */
+.flavor-card.flavor-card-media {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.flavor-card.flavor-card-media .flavor-img-wrap {
+    width: 100%;
+    height: 185px;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-surface-2, #F3EDE4);
+}
+
+.flavor-card.flavor-card-media .flavor-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flavor-card.flavor-card-media:hover .flavor-img-wrap img {
+    transform: scale(1.08);
+}
+
+.flavor-card.flavor-card-media .flavor-swatch-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.flavor-card.flavor-card-media:hover .flavor-swatch-badge {
+    transform: scale(1.15) rotate(10deg);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.flavor-card.flavor-card-media .flavor-card-body {
+    padding: 1.35rem 1.25rem 1.55rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.flavor-card.flavor-card-media h4 {
+    font-size: 1.06rem;
+    font-weight: 700;
+    margin-bottom: 0.45rem;
+    color: var(--text-heading);
+}
+
+.flavor-card.flavor-card-media p {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+/* ===== FLAVOR HARMONY CARDS (HOME 2) ===== */
+.flavor-harmony-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+}
+
+.flavor-harmony-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--primary);
+}
+
+.flavor-harmony-card .flavor-img-wrap {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-surface-2, #F3EDE4);
+}
+
+.flavor-harmony-card .flavor-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flavor-harmony-card:hover .flavor-img-wrap img {
+    transform: scale(1.07);
+}
+
+.flavor-swatch-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2.5px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+    z-index: 2;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.flavor-harmony-card:hover .flavor-swatch-badge {
+    transform: scale(1.15) rotate(12deg);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.flavor-harmony-card .flavor-body {
+    padding: 1.5rem 1.5rem 1.65rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.flavor-harmony-card h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: 0.45rem;
+    line-height: 1.35;
+}
+
+.flavor-harmony-card p {
+    font-size: 0.865rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.15rem;
+}
+
+.flavor-composition {
+    margin-top: auto;
+    padding-top: 0.85rem;
+    border-top: 1px dashed var(--border-default);
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.flavor-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.775rem;
+    color: var(--text-body);
+    background: var(--bg-surface);
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-light);
+    width: fit-content;
+    max-width: 100%;
+    line-height: 1.2;
+}
+
+.flavor-pill strong {
+    color: var(--text-heading);
+    font-weight: 600;
+}
+
+.flavor-pill .pill-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+
 /* ===== PAIRING CARD ===== */
 .pairing-card {
     background: var(--bg-card);
